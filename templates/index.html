@@ -1,0 +1,27 @@
+{% from "_renderfield.html" import renderfield %}
+<html>
+<head>
+    <title>Login</title>
+</head>
+<body>
+    <h1>WTF Form is below!</h1>
+    <form action="{{ url_for('index') }}" method="POST">
+        {{ form.csrf_token }}
+        {{ form.username.label }}
+        {{ form.username }}<br>
+        {{ form.password.label }}
+        {{ form.password }}<br>
+        {{ form.age.label }}
+        {{ form.age }}<br>
+        {{ form.email.label }}
+        {{ form.email }}<br>
+        {{ form.first_name.label }}
+        {{ form.first_name }}<br>
+        {{ form.last_name.label }}
+        {{ form.last_name }}<br>
+        {{ form.home_phone.label }}
+        {{ form.home_phone }}<br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
